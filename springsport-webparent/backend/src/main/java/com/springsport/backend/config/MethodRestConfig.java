@@ -1,6 +1,6 @@
 package com.springsport.backend.config;
 
-import com.springsport.common.entity.product.Product;
+import com.springsport.common.entity.Product;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.metamodel.Type;
 import org.springframework.beans.factory.annotation.Autowired;

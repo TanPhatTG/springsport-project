@@ -1,6 +1,6 @@
 package com.springsport.backend.module.product;
 
-import com.springsport.common.entity.product.Product;
+import com.springsport.common.entity.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;

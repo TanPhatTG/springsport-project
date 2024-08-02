@@ -1,4 +1,4 @@
-package com.springsport.common.entity.product;
+package com.springsport.common.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;

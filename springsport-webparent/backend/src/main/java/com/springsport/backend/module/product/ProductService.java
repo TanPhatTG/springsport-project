@@ -1,12 +1,11 @@
 package com.springsport.backend.module.product;
 
-import com.springsport.common.entity.product.Product;
+import com.springsport.common.entity.Product;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Objects;
 
 @Service
 @Transactional

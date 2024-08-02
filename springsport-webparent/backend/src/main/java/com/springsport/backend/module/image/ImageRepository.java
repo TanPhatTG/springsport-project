@@ -1,6 +1,6 @@
 package com.springsport.backend.module.image;
 
-import com.springsport.common.entity.product.Image;
+import com.springsport.common.entity.Image;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
