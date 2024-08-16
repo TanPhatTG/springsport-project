@@ -2,11 +2,11 @@ package com.springsport.backend.module.product;
 
 import com.springsport.common.entity.Product;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 
 
@@ -22,9 +22,4 @@ public class ProductRestController {
         this.productService = productService;
     }
 
-    @GetMapping("")
-    public ResponseEntity<List<Product>> getProductList(){
-        List<Product> productList = this.productService.getAll();
-        return ResponseEntity.ok(productList);
-    }
 }
