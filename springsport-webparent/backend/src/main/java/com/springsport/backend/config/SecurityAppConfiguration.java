@@ -17,13 +17,19 @@ import java.util.Arrays;
 @Configuration
 public class SecurityAppConfiguration {
 
+    private UserAuthService userAuthService;
+
+    @Autowired
+    public SecurityAppConfiguration(UserAuthService userAuthService) {
+        this.userAuthService = userAuthService;
+    }
+
     @Bean
     public BCryptPasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
     }
 
     @Bean
-    @Autowired
     public DaoAuthenticationProvider authenticationProvider(UserAuthService userAuthService){
         DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
         authProvider.setUserDetailsService(userAuthService);
