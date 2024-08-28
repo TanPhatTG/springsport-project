@@ -1,5 +1,6 @@
 package com.springsport.backend.config;
 
+import com.springsport.backend.config.auth.UserAuthService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -25,6 +26,7 @@ public class SecurityAppConfiguration {
     @Autowired
     public DaoAuthenticationProvider authenticationProvider(UserAuthService userAuthService){
         DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
+        authProvider.setUserDetailsService(userAuthService);
         authProvider.setPasswordEncoder(passwordEncoder());
         return authProvider;
     }
